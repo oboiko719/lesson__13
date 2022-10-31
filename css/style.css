@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+[class*="__container"] {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+  padding: 5px;
+}
+
+.page {
+  padding: 15px;
+}
+
+.page__title {
+  margin-bottom: 20px;
+  font-size: 50px;
+  color:darkgreen;
+  font-weight: 700;  
+  animation: title 1s ease forwards;
+  transform: translate(0px, 50%);
+  opacity: 0;
+  position: relative;
+  
+}
+
+.page__title::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  top: 17px;
+  margin-left: 50px;
+  animation-name: rotate;  
+animation-duration: 5s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+}
+
+@keyframes rotate{
+  0%{
+   transform: rotate(0deg);
+  }
+  100%{
+transform: rotate(360deg);
+  }
+}
+
+.page__desk {  
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #000;
+  animation: title 1.5s ease 0.5s forwards;
+  transform: translate(0px, 50%);
+  opacity: 0;
+}
+
+@keyframes title {
+  0% {
+
+  }
+  100%{
+    transform: translate(0px,0%);
+    opacity: 1;
+  }
+}
+
+.page__image {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  animation-name: image-rotate;
+  opacity: 0;
+  transition-duration: 3s;
+  transition-delay: 1s;
+}
+
+.page__image:hover {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+}
+
+.page__block {
+  background-color:aquamarine;
+  transition-duration: 3s;
+  transition-delay: 1s;
+}
+
+.page__block:hover {
+  background-color:cornflowerblue;
+}
+
+.transition{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.transition__text{
+  color:#000;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+background-color:beige;
+padding: 10px;
+transition: 2s;
+}
+ 
+.transition__text:hover {
+font-size: 30px;
+color: red;
+}
+
+.transition__block{
+  margin-bottom: 30px;
+  background-color:blue;
+  width: 100px;
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px rgb(23, 23, 64);
+  transition-property: all;
+  transition-duration: 3s;
+  transition-delay: 500ms;
+  transition-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.transition__block:hover {
+  width: 300px;
+  height: 200px;
+  box-shadow:10px 20px 10px rgb(111, 130, 207);
+  background-color:rgb(30, 60, 111)
+  }
+
+  .animation{
+    max-width: 500px;
+    perspective: 500px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+  }
+
+  .animation__box{
+    transform: rotateX(35deg);
+    position: relative;
+  }
+  
+  .animation__text{
+    color:#000;
+    font-size: 20px;
+    margin-bottom: 30px;
+    background-color:rgb(237, 237, 87);
+  text-align: center;
+  padding: 20px;
+  animation-name: text;
+  overflow: hidden;
+  }
+
+  .slide-up {  
+   position: relative;
+   bottom: 0px;
+   animation: text 3s linear infinite;
+  }
+
+  @keyframes text{
+    0%{
+      bottom: -200px;
+    }
+    100%{
+      bottom: 0;
+    }
+  }
+
+  .animation__box {
+    position: relative;
+  }
+
+  
+  .animation__block{
+    margin-bottom: 30px;
+    background-color:rgb(108, 108, 207);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: absolute;
+    animation-name: circle;
+animation-duration: 4s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-play-state: running;
+animation-delay: 0s;
+  }
+
+  @keyframes circle{
+
+    0%{
+    left: 0%;
+    }
+    50%{
+    border-radius: 5%;
+    left:100%;
+    }
+    100%{
+    left: 0%;
+    }
+  }
+
+  .animation__block:hover {
+      animation-play-state: paused
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
